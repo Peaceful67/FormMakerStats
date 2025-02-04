@@ -22,14 +22,19 @@ function form_maker_stats($atts) {
         'form-id' => -1,
         'group-by' => '',
         'stats-by' => '',
+        'group-order' => '',
             ], $atts, 'form-maker-stats');
     $form_id = absint($params['form-id']);
     $group_by = $params['group-by'];
     $stats_by = array_map('trim', explode(',', $params['stats-by']));
+    $group_order = array_map('trim', explode(',', $params['group-order']));
     $ret = '';
     $submits = fms_get_submits($form_id, $group_by, $stats_by);
     $grouped = [];
     $counted = [];
+    foreach ($group_order as $group) {
+        $grouped[$group] = [];
+    }
     foreach ($submits as $item) {
         $grouped[$item[$group_by]][] = $item['Name'] ?? 'Név';
         foreach ($stats_by as $stat) {
