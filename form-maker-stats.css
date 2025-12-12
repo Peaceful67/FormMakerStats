@@ -1,3 +1,33 @@
+
+.fms-total {
+    background-color:#305c6e;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    color: whitesmoke;
+    text-align: center;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+}
+.fms-ad {
+    width: 90%;
+    height: 80px;
+    text-align: left;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+    border: none;
+    word-wrap: break-word; /* Breaks long words */
+    overflow-wrap: break-word; /* Ensures text wraps */
+}
+.fms-container {
+            display: flex;
+            margin: 20px;
+            justify-content: left; /* Centers boxes horizontally */
+            gap: 20px; /* Adds space between boxes */
+        }
 .fms-table-wrapper {
     overflow: hidden;
     border-radius: 10px;
@@ -10,16 +40,17 @@
     background: #f9f9f9;
 }
 
-.fms-table th, 
+.fms-table th,
 .fms-table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
 }
 
-.fms-table th {
-    background-color: #f1f1f1;
+.fms-table thead tr th {
+    background-color: #305c6e;;
     font-weight: bold;
+    color: whitesmoke  !important;
 }
 
 /* Striped Rows */
